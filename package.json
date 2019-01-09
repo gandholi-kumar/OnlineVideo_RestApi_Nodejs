@@ -1,0 +1,31 @@
+{
+  "name": "vemba_challenge",
+  "version": "1.0.0",
+  "description": "Node.js RESTful API for the video list.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Saiarunkumar Video List RESTful API"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api",
+    "for",
+    "video",
+    "list"
+  ],
+  "author": "Gandholi Saiarunkumar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.2",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9"
+  }
+}
