@@ -106,4 +106,4 @@ For detailed schema, parameters, code snippet and returned responses, read [Play
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/gandholi-kumar/OnlineVideo_RestApi_Nodejs/blob/master/LICENSE) file for details
