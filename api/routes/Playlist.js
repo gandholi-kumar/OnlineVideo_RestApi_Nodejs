@@ -86,6 +86,8 @@ router.get('/:PlaylistId',(req,res,next) =>{
             });
         }
         res.status(200).json({
+            title: playlist.name,
+            websiteURL: playlist.websiteURL,
             videosList: playlist.video            
         })
     })
