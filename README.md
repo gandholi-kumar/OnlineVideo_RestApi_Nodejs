@@ -1,6 +1,6 @@
 # RestApi for online videos using Nodejs
 
-This project is designed to provide a RESTful api service to handle the requests.
+This project is designed to provide a RESTful api service to handle the requests. Cross-origin resource sharing is been handled with in the api.
 Using this OnlineVideo_RestApi_Nodejs, clients can creates and manages the videos and the playlists.
 
 **Video**
@@ -17,16 +17,18 @@ Using this OnlineVideo_RestApi_Nodejs, clients can creates and manages the video
 ## Getting Started
 
 * Download the project files to local folder.
-* Install the node modules to the downloaded project i.e., OnlineVideo_RestApi_Nodejs via `npm install` in visual studio code or in command prompt.  
-* Change the Database_Name to user preferred database_name, which can be found in the below mentioned path
+* Install the node modules to the downloaded project i.e., OnlineVideo_RestApi_Nodejs via **'npm install`** in visual studio code terminal or in command prompt. 
+* Start the mongoDb server, which run's under the port `"localhost:27017"` and create DataBase and name it of your choice.
+* Change the Database_Name in project which can be found in the below mentioned path to user preferred database_name.
 > `api -> Models -> db.js`  
-> `mongoose.connect('mongodb://localhost:27017/Database_Name', {useNewUrlParser :true}`.
-* Start the API server by running the command `npm start`, which inturn run in `http://localhost:3000`.
+> `mongoose.connect('mongodb://localhost:27017/`Database_Name`', {useNewUrlParser :true}`.
+* Start the API server by running the command **`npm start`** in visual studio command terminal, which run's the application in **`http://localhost:3000`**.
 * Developers may call the API via protocol methods GET, POST and DELETE to perform operations, using the language of their choice.
+* To test the API we can use Postman/Fiddler.
 
 ### Prerequisites
-
-* MongoDb 
+* Node.js and NPM
+* MongoDb compass community
 * Visual Studio Code
 
 ## Resources URI
@@ -37,47 +39,12 @@ Video endpoint URI allows client to retrieve, create and delete Video.
 
 | Method | URI Endpoint |
 | ------------- | ------------- |
-| POST | http://localhost:3000/videos/ |
 | GET | http://localhost:3000/videos/ |
 | GET | http://localhost:3000/videos/:VideoId |
+| POST | http://localhost:3000/videos/ |
 | DELETE | http://localhost:3000/videos/:VideoId |
 
-Check below code snipped for detailed schema, parameters, code snippet and returned responses  
-
-#### POST
-
-**Endpoint URI**
-`http://localhost:3000/videos/`
-
-**Required Parameters**
-`title` `thumbnailURL` `videoUrl` `duration`
-
-**URL Snippet**  
-```
--H 'Content-Type: application/json'  
--d "{  
-        "title": "Title 1",  
-        "thumbnailURL": "https://asbcsdfldjf.jpg",  
-        "videoUrl": "https://asdfnsdlo.sldjflkdsf",  
-        "duration": 5082  
-     }"  
-```
-
-**On Success**  
-```
-{  
-"code":"200",  
-"message":"Video inserted Succesfully",  
-}  
-```
-
-**On Failure**
-```
-{
-"code":"500",
-"message":"Some error occurred"
-}
-```
+For detailed schema, parameters, code snippet and returned responses, read [Video - Code Snippet](https://github.com/gandholi-kumar/OnlineVideo_RestApi_Nodejs/blob/master/Video%20Code%20Snippet.pdf)
 
 ### Playlist
 Playlist endpoint URI allows client to retrieve, create and delete Playlist.
@@ -89,7 +56,7 @@ Playlist endpoint URI allows client to retrieve, create and delete Playlist.
 | POST | http://localhost:3000/playlists |
 | DELETE | http://localhost:3000/playlists/:Playlist_id |
 
-For detailed schema, parameters, code snippet and returned responses, read [Playlist Resource Documentation](asdf sdf)
+For detailed schema, parameters, code snippet and returned responses, read [Playlist - Code Snippet](https://github.com/gandholi-kumar/OnlineVideo_RestApi_Nodejs/blob/master/Playlist%20Code%20Snippet.pdf)
 
 ## Built With
 
